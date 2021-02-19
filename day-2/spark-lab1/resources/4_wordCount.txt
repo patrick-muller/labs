@@ -1,0 +1,112 @@
+[hadoop@ip-10-0-3-125 ~]$ cd /usr/lib/spark/
+[hadoop@ip-10-0-3-125 spark]$ /usr/bin/spark-submit --master local[4] /usr/lib/spark/examples/src/main/python/wordcount.py 'file:///usr/lib/spark/examples/src/main/resources/people.txt'
+20/08/26 15:55:41 INFO SparkContext: Running Spark version 2.4.5-amzn-0
+20/08/26 15:55:41 INFO SparkContext: Submitted application: PythonWordCount
+20/08/26 15:55:41 INFO SecurityManager: Changing view acls to: hadoop
+20/08/26 15:55:41 INFO SecurityManager: Changing modify acls to: hadoop
+20/08/26 15:55:41 INFO SecurityManager: Changing view acls groups to:
+20/08/26 15:55:41 INFO SecurityManager: Changing modify acls groups to:
+20/08/26 15:55:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+20/08/26 15:55:41 INFO Utils: Successfully started service 'sparkDriver' on port 34527.
+20/08/26 15:55:41 INFO SparkEnv: Registering MapOutputTracker
+20/08/26 15:55:41 INFO SparkEnv: Registering BlockManagerMaster
+20/08/26 15:55:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/08/26 15:55:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/08/26 15:55:41 INFO DiskBlockManager: Created local directory at /mnt/tmp/blockmgr-16d7d313-9ce3-4dd2-b39c-5cf2a99aa04b
+20/08/26 15:55:41 INFO MemoryStore: MemoryStore started with capacity 1028.8 MB
+20/08/26 15:55:42 INFO SparkEnv: Registering OutputCommitCoordinator
+20/08/26 15:55:42 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/08/26 15:55:42 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ip-10-0-3-125.eu-west-1.compute.internal:4040
+20/08/26 15:55:42 INFO Executor: Starting executor ID driver on host localhost
+20/08/26 15:55:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39331.
+20/08/26 15:55:42 INFO NettyBlockTransferService: Server created on ip-10-0-3-125.eu-west-1.compute.internal:39331
+20/08/26 15:55:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/08/26 15:55:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-10-0-3-125.eu-west-1.compute.internal, 39331, None)
+20/08/26 15:55:42 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-0-3-125.eu-west-1.compute.internal:39331 with 1028.8 MB RAM, BlockManagerId(driver, ip-10-0-3-125.eu-west-1.compute.internal, 39331, None)
+20/08/26 15:55:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-10-0-3-125.eu-west-1.compute.internal, 39331, None)
+20/08/26 15:55:42 INFO BlockManager: external shuffle service port = 7337
+20/08/26 15:55:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-10-0-3-125.eu-west-1.compute.internal, 39331, None)
+20/08/26 15:55:43 INFO EventLoggingListener: Logging events to hdfs:/var/log/spark/apps/local-1598457342320
+20/08/26 15:55:43 INFO SharedState: loading hive config file: file:/etc/spark/conf.dist/hive-site.xml
+20/08/26 15:55:43 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('hdfs:///user/spark/warehouse').
+20/08/26 15:55:43 INFO SharedState: Warehouse path is 'hdfs:///user/spark/warehouse'.
+20/08/26 15:55:44 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/08/26 15:55:44 INFO InMemoryFileIndex: It took 44 ms to list leaf files for 1 paths.
+20/08/26 15:55:45 INFO FileSourceStrategy: Pruning directories with:
+20/08/26 15:55:45 INFO FileSourceStrategy: Post-Scan Filters:
+20/08/26 15:55:45 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/08/26 15:55:45 INFO FileSourceScanExec: Pushed Filters:
+20/08/26 15:55:46 INFO CodeGenerator: Code generated in 218.262138 ms
+20/08/26 15:55:46 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 321.5 KB, free 1028.5 MB)
+20/08/26 15:55:46 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 27.3 KB, free 1028.5 MB)
+20/08/26 15:55:46 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-0-3-125.eu-west-1.compute.internal:39331 (size: 27.3 KB, free: 1028.8 MB)
+20/08/26 15:55:46 INFO SparkContext: Created broadcast 0 from javaToPython at NativeMethodAccessorImpl.java:0
+20/08/26 15:55:46 INFO GPLNativeCodeLoader: Loaded native gpl library
+20/08/26 15:55:46 INFO LzoCodec: Successfully loaded & initialized native-lzo library [hadoop-lzo rev ff8f5709577defb6b78cdc1f98cfe129c4b6fe46]
+20/08/26 15:55:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes, number of split files: 1, prefetch: false
+20/08/26 15:55:46 INFO FileSourceScanExec: relation: None, fileSplitsInPartitionHistogram: ArrayBuffer((1 fileSplits,1))
+20/08/26 15:55:46 INFO SparkContext: Starting job: collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40
+20/08/26 15:55:46 INFO DAGScheduler: Registering RDD 6 (reduceByKey at /usr/lib/spark/examples/src/main/python/wordcount.py:39) as input to shuffle 0
+20/08/26 15:55:46 INFO DAGScheduler: Got job 0 (collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40) with 1 output partitions
+20/08/26 15:55:46 INFO DAGScheduler: Final stage: ResultStage 1 (collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40)
+20/08/26 15:55:46 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+20/08/26 15:55:46 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+20/08/26 15:55:46 INFO DAGScheduler: Submitting ShuffleMapStage 0 (PairwiseRDD[6] at reduceByKey at /usr/lib/spark/examples/src/main/python/wordcount.py:39), which has no missing parents
+20/08/26 15:55:46 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 19.6 KB, free 1028.5 MB)
+20/08/26 15:55:46 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 11.3 KB, free 1028.5 MB)
+20/08/26 15:55:46 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-0-3-125.eu-west-1.compute.internal:39331 (size: 11.3 KB, free: 1028.8 MB)
+20/08/26 15:55:46 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1203
+20/08/26 15:55:46 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (PairwiseRDD[6] at reduceByKey at /usr/lib/spark/examples/src/main/python/wordcount.py:39) (first 15 tasks are for partitions Vector(0))
+20/08/26 15:55:46 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/08/26 15:55:46 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/08/26 15:55:46 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/08/26 15:55:47 INFO ContextCleaner: Cleaned accumulator 3
+20/08/26 15:55:47 INFO ContextCleaner: Cleaned accumulator 4
+20/08/26 15:55:47 INFO ContextCleaner: Cleaned accumulator 2
+20/08/26 15:55:47 INFO FileScanRDD: TID: 0 - Reading current file: path: file:///usr/lib/spark/examples/src/main/resources/people.txt, range: 0-32, partition values: [empty row], isDataPresent: false
+20/08/26 15:55:47 INFO CodeGenerator: Code generated in 12.873025 ms
+20/08/26 15:55:47 INFO PythonRunner: Times: total = 399, boot = 311, init = 83, finish = 5
+20/08/26 15:55:47 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2257 bytes result sent to driver
+20/08/26 15:55:47 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 792 ms on localhost (executor driver) (1/1)
+20/08/26 15:55:47 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+20/08/26 15:55:47 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 35675
+20/08/26 15:55:47 INFO DAGScheduler: ShuffleMapStage 0 (reduceByKey at /usr/lib/spark/examples/src/main/python/wordcount.py:39) finished in 0.916 s
+20/08/26 15:55:47 INFO DAGScheduler: looking for newly runnable stages
+20/08/26 15:55:47 INFO DAGScheduler: running: Set()
+20/08/26 15:55:47 INFO DAGScheduler: waiting: Set(ResultStage 1)
+20/08/26 15:55:47 INFO DAGScheduler: failed: Set()
+20/08/26 15:55:47 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[9] at collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40), which has no missing parents
+20/08/26 15:55:47 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.4 KB, free 1028.5 MB)
+20/08/26 15:55:47 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.7 KB, free 1028.5 MB)
+20/08/26 15:55:47 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-0-3-125.eu-west-1.compute.internal:39331 (size: 4.7 KB, free: 1028.8 MB)
+20/08/26 15:55:47 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1203
+20/08/26 15:55:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (PythonRDD[9] at collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40) (first 15 tasks are for partitions Vector(0))
+20/08/26 15:55:47 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/08/26 15:55:47 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, ANY, 7662 bytes)
+20/08/26 15:55:47 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+20/08/26 15:55:47 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/08/26 15:55:47 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+20/08/26 15:55:47 INFO PythonRunner: Times: total = 53, boot = -386, init = 439, finish = 0
+20/08/26 15:55:47 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1851 bytes result sent to driver
+20/08/26 15:55:47 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 108 ms on localhost (executor driver) (1/1)
+20/08/26 15:55:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+20/08/26 15:55:47 INFO DAGScheduler: ResultStage 1 (collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40) finished in 0.148 s
+20/08/26 15:55:47 INFO DAGScheduler: Job 0 finished: collect at /usr/lib/spark/examples/src/main/python/wordcount.py:40, took 1.179002 s
+Michael,: 1
+29: 1
+Andy,: 1
+30: 1
+Justin,: 1
+19: 1
+20/08/26 15:55:47 INFO SparkUI: Stopped Spark web UI at http://ip-10-0-3-125.eu-west-1.compute.internal:4040
+20/08/26 15:55:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/08/26 15:55:48 INFO MemoryStore: MemoryStore cleared
+20/08/26 15:55:48 INFO BlockManager: BlockManager stopped
+20/08/26 15:55:48 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/08/26 15:55:48 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/08/26 15:55:48 INFO SparkContext: Successfully stopped SparkContext
+20/08/26 15:55:48 INFO ShutdownHookManager: Shutdown hook called
+20/08/26 15:55:48 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-38da093b-6bb6-4c94-a42b-0e04431eb47c/pyspark-662ee090-aa2b-4605-a564-d9271461fa1d
+20/08/26 15:55:48 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-38da093b-6bb6-4c94-a42b-0e04431eb47c
+20/08/26 15:55:48 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-711eb93c-6e85-4d8e-ae83-d503fa675455
+[hadoop@ip-10-0-3-125 spark]$

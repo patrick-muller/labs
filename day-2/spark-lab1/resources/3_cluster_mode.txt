@@ -1,0 +1,73 @@
+[hadoop@ip-10-0-3-125 ~]$ 
+[hadoop@ip-10-0-3-125 ~]$ /usr/bin/spark-submit \
+> --class org.apache.spark.examples.SparkPi \
+> --master yarn \
+> --deploy-mode cluster \
+> /usr/lib/spark/examples/jars/spark-examples.jar \
+> 10
+20/08/26 15:53:56 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/08/26 15:53:56 INFO RMProxy: Connecting to ResourceManager at ip-10-0-3-125.eu-west-1.compute.internal/10.0.3.125:8032
+20/08/26 15:53:57 INFO Client: Requesting a new application from cluster with 2 NodeManagers
+20/08/26 15:53:57 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (12288 MB per container)
+20/08/26 15:53:57 INFO Client: Will allocate AM container, with 2432 MB memory including 384 MB overhead
+20/08/26 15:53:57 INFO Client: Setting up container launch context for our AM
+20/08/26 15:53:57 INFO Client: Setting up the launch environment for our AM container
+20/08/26 15:53:57 INFO Client: Preparing resources for our AM container
+20/08/26 15:53:57 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+20/08/26 15:53:59 INFO Client: Uploading resource file:/mnt/tmp/spark-6684d675-ac6a-4268-a341-90c43941f1ca/__spark_libs__4110229476963257826.zip -> hdfs://ip-10-0-3-125.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1598380160354_0004/__spark_libs__4110229476963257826.zip
+20/08/26 15:53:59 INFO Client: Uploading resource file:/usr/lib/spark/examples/jars/spark-examples.jar -> hdfs://ip-10-0-3-125.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1598380160354_0004/spark-examples.jar
+20/08/26 15:53:59 INFO Client: Uploading resource file:/etc/spark/conf/hive-site.xml -> hdfs://ip-10-0-3-125.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1598380160354_0004/hive-site.xml
+20/08/26 15:54:00 INFO Client: Uploading resource file:/mnt/tmp/spark-6684d675-ac6a-4268-a341-90c43941f1ca/__spark_conf__4433460415550310872.zip -> hdfs://ip-10-0-3-125.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1598380160354_0004/__spark_conf__.zip
+20/08/26 15:54:00 INFO SecurityManager: Changing view acls to: hadoop
+20/08/26 15:54:00 INFO SecurityManager: Changing modify acls to: hadoop
+20/08/26 15:54:00 INFO SecurityManager: Changing view acls groups to:
+20/08/26 15:54:00 INFO SecurityManager: Changing modify acls groups to:
+20/08/26 15:54:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+20/08/26 15:54:01 INFO Client: Submitting application application_1598380160354_0004 to ResourceManager
+20/08/26 15:54:01 INFO YarnClientImpl: Submitted application application_1598380160354_0004
+20/08/26 15:54:02 INFO Client: Application report for application_1598380160354_0004 (state: ACCEPTED)
+20/08/26 15:54:02 INFO Client:
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1598457241283
+	 final status: UNDEFINED
+	 tracking URL: http://ip-10-0-3-125.eu-west-1.compute.internal:20888/proxy/application_1598380160354_0004/
+	 user: hadoop
+20/08/26 15:54:03 INFO Client: Application report for application_1598380160354_0004 (state: ACCEPTED)
+20/08/26 15:54:04 INFO Client: Application report for application_1598380160354_0004 (state: ACCEPTED)
+20/08/26 15:54:05 INFO Client: Application report for application_1598380160354_0004 (state: ACCEPTED)
+20/08/26 15:54:06 INFO Client: Application report for application_1598380160354_0004 (state: ACCEPTED)
+20/08/26 15:54:07 INFO Client: Application report for application_1598380160354_0004 (state: RUNNING)
+20/08/26 15:54:07 INFO Client:
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: ip-10-0-3-117.eu-west-1.compute.internal
+	 ApplicationMaster RPC port: 44107
+	 queue: default
+	 start time: 1598457241283
+	 final status: UNDEFINED
+	 tracking URL: http://ip-10-0-3-125.eu-west-1.compute.internal:20888/proxy/application_1598380160354_0004/
+	 user: hadoop
+20/08/26 15:54:08 INFO Client: Application report for application_1598380160354_0004 (state: RUNNING)
+20/08/26 15:54:09 INFO Client: Application report for application_1598380160354_0004 (state: RUNNING)
+20/08/26 15:54:10 INFO Client: Application report for application_1598380160354_0004 (state: RUNNING)
+20/08/26 15:54:11 INFO Client: Application report for application_1598380160354_0004 (state: RUNNING)
+20/08/26 15:54:12 INFO Client: Application report for application_1598380160354_0004 (state: FINISHED)
+20/08/26 15:54:12 INFO Client:
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: ip-10-0-3-117.eu-west-1.compute.internal
+	 ApplicationMaster RPC port: 44107
+	 queue: default
+	 start time: 1598457241283
+	 final status: SUCCEEDED
+	 tracking URL: http://ip-10-0-3-125.eu-west-1.compute.internal:20888/proxy/application_1598380160354_0004/
+	 user: hadoop
+20/08/26 15:54:12 INFO Client: Deleted staging directory hdfs://ip-10-0-3-125.eu-west-1.compute.internal:8020/user/hadoop/.sparkStaging/application_1598380160354_0004
+20/08/26 15:54:12 INFO ShutdownHookManager: Shutdown hook called
+20/08/26 15:54:12 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-b026da4c-368f-4722-9b35-cc9c3ce8163e
+20/08/26 15:54:12 INFO ShutdownHookManager: Deleting directory /mnt/tmp/spark-6684d675-ac6a-4268-a341-90c43941f1ca
+[hadoop@ip-10-0-3-125 ~]$
