@@ -75,7 +75,7 @@ Explain your answers in as much detail as possible in your own words and share y
 
 ### HIVE
 
-1.	Create an Hive table using the bellow command in the link https://s3.amazonaws.com/amazon-reviews-pds/readme.html
+1.	Create an Hive table using the bellow command
 > CREATE EXTERNAL TABLE amazon_reviews_parquet(
 >   marketplace string, 
 >   customer_id string, 
@@ -101,15 +101,20 @@ Explain your answers in as much detail as possible in your own words and share y
 > LOCATION
 >   's3://amazon-reviews-pds/parquet/'
 
-And run the msck repair table to load the table partitions
+2. Run the msck repair table to load the table partitions
 >   msck repair table amazon_reviews_parquet
 
+----
+
+### Questions
+
 a.  What is the product_title with more reviews ?
+
 b.  Write a query to return only the 5th product_title with more reviews.
+
 c.  What is the product_title with the best star_rating per year.
 
-
-2.	The dataset has a folder with TSV data, try to create a table to read the TSV data and share with us the create table statement.
+d.	The dataset has a folder with TSV data, try to create a table to read the TSV data and share with us the create table statement.
 >   s3://amazon-reviews-pds/tsv/
 
 ### HDFS
