@@ -112,7 +112,7 @@ Explain your answers in as much detail as possible in your own words and share y
 
 a.  What is the product_title with more reviews ?
 
-b.  Write a query to return only the 5th product_title with more reviews.
+b.  Write a query to return only the 5th product_title with most reviews.
 
 c.  What is the product_title with the best star_rating per year.
 
