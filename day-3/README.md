@@ -46,8 +46,13 @@ The file shared needs to be compressed and the file name needs to be your Name, 
 > patrickmuller.txt.gz
 
 
-## **4 - Dataset:**
+## **4 - Dataset Details:**
 ----
+On this topic I am just showing some details about the Reviews dataset
+
+The exercises starts on the number 5
+
+You don't need to run the below commands (**it is just an example**)
 
 Check the Dataset link
 https://s3.amazonaws.com/amazon-reviews-pds/readme.html
