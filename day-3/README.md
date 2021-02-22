@@ -15,7 +15,9 @@ https://aws-support-uploader.s3.amazonaws.com/uploader?account-id=900124452366&c
 You should share with us your answers in a Text File with the below Details
 
 Name and Surname:
+
 Mail:
+
 Cluster ID: j-xxxxx
 
 #### Practical:
@@ -44,7 +46,7 @@ The file shared needs to be compressed and the file name needs to be your Name, 
 > patrickmuller.txt.gz
 
 
-## **4 - Data Set:**
+## **4 - Dataset:**
 ----
 
 Check the Dataset link
@@ -59,7 +61,7 @@ To download files locally you can copy 1 file
 or multiple files
 >aws s3 cp --recursive s3://amazon-reviews-pds/tsv/ .
 
-The size of the data set is:
+The size of the dataset is:
 > aws s3 ls --summarize --recursive --human-readable s3://amazon-reviews-pds/tsv/
 >
 > Total Objects: 55
@@ -99,7 +101,7 @@ Explain your answers in as much detail as possible in your own words and share y
 > OUTPUTFORMAT 
 >   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 > LOCATION
->   's3://amazon-reviews-pds/parquet/'
+>   's3://amazon-reviews-pds/parquet/';
 
 2. Run the msck repair table to load the table partitions
 >   msck repair table amazon_reviews_parquet
@@ -157,7 +159,7 @@ Why we have Mis-replicated blocks ?
 
 Explain your answers in as much detail as possible in your own words
 
-1.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run an WordCount program reading the data from the REVIEW Data set?
+1.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run an WordCount program reading the data from the REVIEW Dataset?
 And Why?
 
 2.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run a distinct count reading the data from the column actor2name ? And Why?
