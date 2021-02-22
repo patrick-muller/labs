@@ -67,7 +67,7 @@ The size of the data set is:
 
 
 
-## **4 - Practical:**
+## **5 - Practical:**
 ----
 
 Explain your answers in as much detail as possible in your own words and share your code/commands
@@ -146,7 +146,7 @@ Answer:
 Why we have Mis-replicated blocks ?
 
 
-## **5 - Questions:**
+## **6 - Questions:**
 ----
 
 Explain your answers in as much detail as possible in your own words
