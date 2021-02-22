@@ -104,7 +104,7 @@ Explain your answers in as much detail as possible in your own words and share y
 >   's3://amazon-reviews-pds/parquet/';
 
 2. Run the msck repair table to load the table partitions
->   msck repair table amazon_reviews_parquet
+>   msck repair table amazon_reviews_parquet;
 
 ----
 
