@@ -118,7 +118,7 @@ d.	The dataset has a folder with TSV data, try to create a table to read the TSV
 >   s3://amazon-reviews-pds/tsv/
 
 ### HDFS
-Copy the Gdelt Dataset to your HDFS using the below command 
+Copy the REVIEW Dataset to your HDFS using the below command 
 > s3-dist-cp --src s3://amazon-reviews-pds/parquet/product_category=Toys/ --dest /user/hadoop/
 
 You can check the files created running the below command in a second terminal tab
@@ -157,14 +157,14 @@ Why we have Mis-replicated blocks ?
 
 Explain your answers in as much detail as possible in your own words
 
-1.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run an WordCount program reading the data from the GDEL Data set?
+1.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run an WordCount program reading the data from the REVIEW Data set?
 And Why?
 
 2.	Which framework (Spark, Hive, MapReduce) in your opinion will provide a better performance to run a distinct count reading the data from the column actor2name ? And Why?
 
-3.	The GDEL Dataset files are in CSV format, for which use case the CSV files are better than other formats like CSV, Parquet, Avro, JSON ?
+3.	The REVIEW Dataset files are in CSV format, for which use case the CSV files are better than other formats like CSV, Parquet, Avro, JSON ?
 
-4.	To copy the GDEL Dataset from S3 to HDFS, you can convert the data from CSV to Parquet, Avro, JSON. If you want to extract some information like number of events per category where the events are in Russia and United States, which file format will provide the best performance and why ?
+4.	To copy the REVIEW Dataset from S3 to HDFS, you can convert the data from CSV to Parquet, Avro, JSON. If you want to extract some information like number of events per category where the events are in Russia and United States, which file format will provide the best performance and why ?
 
 5.  And in the copy, you can change the compression format to LZO, GZIP, Bzip2, Snappy, do you recommend to compress the data ? and why ?
 
