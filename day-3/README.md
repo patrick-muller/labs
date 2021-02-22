@@ -119,6 +119,7 @@ Copy the Gdelt Dataset to your HDFS using the below command
 You can check the files created running the below command in a second terminal tab
 > hadoop fs -du /user/hadoop/ | wc
 
+----
 1.	The s3-dist-cp creates a MAP Reduce Job, how many maps and how many reduces were created by the above command ?
 Answer: 
 
